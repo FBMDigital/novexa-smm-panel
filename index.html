@@ -1,46 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NOVEXA - Digital Services</title>
+<title>NOVEXA | Digital Growth Platform</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{
- font-family:Arial,sans-serif;
- background:#0b1020;color:white;
-}
-header{
- padding:20px 7%;
- display:flex;justify-content:space-between;
- align-items:center;
- border-bottom:1px solid #283047;
-}
-.logo{font-size:27px;font-weight:bold;color:#a78bfa}
-nav a{color:white;text-decoration:none;margin-left:14px}
-.hero{text-align:center;padding:85px 20px}
-.hero h1{font-size:45px;margin-bottom:20px}
-.hero span{color:#a78bfa}
-.hero p{color:#b9c1d2;line-height:1.8}
-.btn{
- display:inline-block;background:#8b5cf6;
- color:white;padding:13px 25px;
- text-decoration:none;border-radius:8px;
- margin-top:25px;
-}
-.services{text-align:center;padding:40px 7%}
-.cards{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
- gap:18px;margin-top:25px;
-}
-.card{
- background:#151d33;padding:30px;
- border-radius:12px;border:1px solid #293451;
-}
-.card h3{color:#a78bfa;margin-bottom:12px}
-.card p{color:#b9c1d2}
-footer{text-align:center;padding:25px;color:#9ca3af}
+body{font-family:Arial,sans-serif;background:#0b1020;color:#fff}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #293451;flex-wrap:wrap;gap:15px}
+.logo{font-size:28px;font-weight:bold;color:#a78bfa}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-size:14px}
+nav a:hover{color:#a78bfa}
+.actions{display:flex;gap:10px}
+.btn{display:inline-block;padding:12px 19px;background:#8b5cf6;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+.btn-outline{border:1px solid #8b5cf6;color:#c4b5fd;background:transparent}
+.hero{text-align:center;padding:85px 20px 75px;background:radial-gradient(ellipse at top,#282052,#0b1020 65%)}
+.hero h1{font-size:clamp(34px,6vw,55px);margin-bottom:20px}
+.hero h1 span{color:#a78bfa}
+.hero p{color:#b9c1d2;line-height:1.8;max-width:600px;margin:auto}
+.hero .btn{margin-top:25px}
+.section{text-align:center;padding:55px 7%}
+.section h2{font-size:30px;margin-bottom:12px}
+.subtitle{color:#9ca3af}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:30px}
+.card{background:#151d33;padding:28px 18px;border-radius:13px;border:1px solid #293451;text-align:center}
+.card .symbol{font-size:32px;margin-bottom:15px}
+.card h3{color:#c4b5fd;margin-bottom:12px}
+.card p{color:#b9c1d2;font-size:14px;line-height:1.6}
+.card:hover{border-color:#8b5cf6;transform:translateY(-3px)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:30px}
+.step{background:#151d33;padding:25px;border-radius:12px}
+.step h3{color:#a78bfa;margin-bottom:10px}
+.step p{color:#b9c1d2;line-height:1.6;font-size:14px}
+footer{text-align:center;padding:30px 15px;color:#9ca3af;border-top:1px solid #293451}
+footer strong{color:#a78bfa}
 </style>
 </head>
 <body>
@@ -49,40 +44,56 @@ footer{text-align:center;padding:25px;color:#9ca3af}
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
+<a href="#how">How It Works</a>
 </nav>
+<div class="actions">
+<a class="btn btn-outline" href="#login">Login</a>
+<a class="btn" href="#signup">Sign Up</a>
+</div>
 </header>
 
 <section class="hero" id="home">
 <h1>Grow Your <span>Digital World</span></h1>
-<p>Welcome to NOVEXA. Your destination for digital marketing services.</p>
+<p>Welcome to NOVEXA. Explore digital marketing and social media services from one simple platform.</p>
 <a class="btn" href="#services">Explore Services</a>
 </section>
 
-<section class="services" id="services">
+<section class="section" id="services">
 <h2>Our Services</h2>
+<p class="subtitle">Explore our digital service categories</p>
 <div class="cards">
-<div class="card">
-<h3>Instagram</h3>
-<p>Explore Instagram services.</p>
-</div>
-<div class="card">
-<h3>YouTube</h3>
-<p>Explore YouTube services.</p>
-</div>
-<div class="card">
-<h3>Facebook</h3>
-<p>Explore Facebook services.</p>
-</div>
-<div class="card">
-<h3>TikTok</h3>
-<p>Explore TikTok services.</p>
-</div>
+<div class="card"><div class="symbol">◎</div><h3>Instagram</h3><p>Explore Instagram marketing services.</p></div>
+<div class="card"><div class="symbol">▶</div><h3>YouTube</h3><p>Explore YouTube marketing services.</p></div>
+<div class="card"><div class="symbol">f</div><h3>Facebook</h3><p>Explore Facebook marketing services.</p></div>
+<div class="card"><div class="symbol">♪</div><h3>TikTok</h3><p>Explore TikTok marketing services.</p></div>
+<div class="card"><div class="symbol">➤</div><h3>Telegram</h3><p>Explore Telegram community services.</p></div>
 </div>
 </section>
 
+<section class="section" id="how">
+<h2>How NOVEXA Works</h2>
+<div class="steps">
+<div class="step"><h3>01. Create Account</h3><p>Register your account to access the platform.</p></div>
+<div class="step"><h3>02. Choose Service</h3><p>Browse available digital marketing services.</p></div>
+<div class="step"><h3>03. Place Request</h3><p>Submit your service request and track its status.</p></div>
+</div>
+</section>
+
+<section class="section" id="login">
+<h2>Customer Login</h2>
+<p class="subtitle">Login system will be connected in a future step.</p>
+<a class="btn" href="#signup">Create Account</a>
+</section>
+
+<section class="section" id="signup">
+<h2>Create Your Account</h2>
+<p class="subtitle">Registration system will be connected in a future step.</p>
+<a class="btn" href="#home">Back to Home</a>
+</section>
+
 <footer>
-© 2026 NOVEXA. All Rights Reserved.
-<br><br>Owned by FBMDIGITAL
+© 2026 NOVEXA. All Rights Reserved.<br><br>
+Owned by <strong>FBMDIGITAL</strong>
 </footer>
 </body>
 </html>
