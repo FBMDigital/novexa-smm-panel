@@ -1,101 +1,208 @@
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NOVEXA | Digital Growth Platform</title>
+<title>NOVEXA | Social Media Marketing Panel</title>
+<meta name="description" content="NOVEXA Social Media Marketing Panel">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b1020;color:#fff}
-header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #293451;flex-wrap:wrap;gap:15px}
-.logo{font-size:28px;font-weight:bold;color:#a78bfa}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:#fff;text-decoration:none;font-size:14px}
-nav a:hover{color:#a78bfa}
-.actions{display:flex;gap:10px}
-.btn{display:inline-block;padding:12px 19px;background:#8b5cf6;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
-.btn-outline{border:1px solid #8b5cf6;color:#c4b5fd;background:transparent}
-.hero{text-align:center;padding:85px 20px 75px;background:radial-gradient(ellipse at top,#282052,#0b1020 65%)}
-.hero h1{font-size:clamp(34px,6vw,55px);margin-bottom:20px}
-.hero h1 span{color:#a78bfa}
-.hero p{color:#b9c1d2;line-height:1.8;max-width:600px;margin:auto}
-.hero .btn{margin-top:25px}
-.section{text-align:center;padding:55px 7%}
-.section h2{font-size:30px;margin-bottom:12px}
-.subtitle{color:#9ca3af}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:30px}
-.card{background:#151d33;padding:28px 18px;border-radius:13px;border:1px solid #293451;text-align:center}
-.card .symbol{font-size:32px;margin-bottom:15px}
-.card h3{color:#c4b5fd;margin-bottom:12px}
-.card p{color:#b9c1d2;font-size:14px;line-height:1.6}
-.card:hover{border-color:#8b5cf6;transform:translateY(-3px)}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:30px}
-.step{background:#151d33;padding:25px;border-radius:12px}
-.step h3{color:#a78bfa;margin-bottom:10px}
-.step p{color:#b9c1d2;line-height:1.6;font-size:14px}
-footer{text-align:center;padding:30px 15px;color:#9ca3af;border-top:1px solid #293451}
-footer strong{color:#a78bfa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#0b1020;color:white}
+header{background:#111a30;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:27px;font-weight:bold;color:#55d6ff}
+nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
+button,.btn{border:0;padding:12px 20px;border-radius:8px;background:#18a8d8;color:white;font-weight:bold;cursor:pointer}
+button:hover,.btn:hover{background:#087da8}
+.hero{text-align:center;padding:75px 20px;background:linear-gradient(135deg,#101b38,#142c4c)}
+.hero h1{font-size:42px;margin-bottom:15px}
+.hero p{color:#c6d5e8;margin-bottom:25px;line-height:1.7}
+section{padding:45px 6%}
+h2{text-align:center;margin-bottom:25px;color:#55d6ff}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px}
+.card{background:#16233c;padding:25px 15px;text-align:center;border-radius:12px;border:1px solid #263c5d}
+.card h3{margin-bottom:10px}
+.card p{color:#bdcbe0;font-size:14px}
+.auth{max-width:420px;margin:25px auto;background:#16233c;padding:25px;border-radius:12px}
+.auth input{width:100%;padding:13px;margin:9px 0;border-radius:7px;border:1px solid #49617d;background:#0b1020;color:white}
+.auth button{width:100%;margin-top:12px}
+.auth p{text-align:center;margin-top:15px;color:#cbd5e1;font-size:14px}
+.auth a{color:#55d6ff;cursor:pointer}
+#dashboard{display:none;text-align:center}
+#message{margin-top:12px;color:#55d6ff;line-height:1.5}
+footer{text-align:center;padding:25px;background:#111a30;color:#aabbd0}
+.small{font-size:13px;color:#aabbd0;text-align:center;margin-top:12px}
 </style>
 </head>
 <body>
+
 <header>
-<div class="logo">NOVEXA.</div>
+<div class="logo">NOVEXA</div>
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#how">How It Works</a>
+<a href="#account">Login / Sign Up</a>
 </nav>
-<div class="actions">
-<a class="btn btn-outline" href="#login">Login</a>
-<a class="btn" href="#signup">Sign Up</a>
-</div>
 </header>
 
-<section class="hero" id="home">
-<h1>Grow Your <span>Digital World</span></h1>
-<p>Welcome to NOVEXA. Explore digital marketing and social media services from one simple platform.</p>
-<a class="btn" href="#services">Explore Services</a>
-</section>
+<div class="hero" id="home">
+<h1>Grow Your Social Media</h1>
+<p>Welcome to NOVEXA Social Media Marketing Panel.<br>
+Manage your social media services in one place.</p>
+<a class="btn" href="#account">Get Started</a>
+</div>
 
-<section class="section" id="services">
+<section id="services">
 <h2>Our Services</h2>
-<p class="subtitle">Explore our digital service categories</p>
 <div class="cards">
-<div class="card"><div class="symbol">◎</div><h3>Instagram</h3><p>Explore Instagram marketing services.</p></div>
-<div class="card"><div class="symbol">▶</div><h3>YouTube</h3><p>Explore YouTube marketing services.</p></div>
-<div class="card"><div class="symbol">f</div><h3>Facebook</h3><p>Explore Facebook marketing services.</p></div>
-<div class="card"><div class="symbol">♪</div><h3>TikTok</h3><p>Explore TikTok marketing services.</p></div>
-<div class="card"><div class="symbol">➤</div><h3>Telegram</h3><p>Explore Telegram community services.</p></div>
+<div class="card"><h3>Instagram</h3><p>Followers, Likes & Views</p></div>
+<div class="card"><h3>YouTube</h3><p>Views, Subscribers & Likes</p></div>
+<div class="card"><h3>Facebook</h3><p>Page Likes & Followers</p></div>
+<div class="card"><h3>TikTok</h3><p>Followers, Likes & Views</p></div>
+<div class="card"><h3>Telegram</h3><p>Channel & Group Services</p></div>
 </div>
 </section>
 
-<section class="section" id="how">
-<h2>How NOVEXA Works</h2>
-<div class="steps">
-<div class="step"><h3>01. Create Account</h3><p>Register your account to access the platform.</p></div>
-<div class="step"><h3>02. Choose Service</h3><p>Browse available digital marketing services.</p></div>
-<div class="step"><h3>03. Place Request</h3><p>Submit your service request and track its status.</p></div>
+<section id="how">
+<h2>How It Works</h2>
+<div class="cards">
+<div class="card"><h3>01. Register</h3><p>Create your free account.</p></div>
+<div class="card"><h3>02. Login</h3><p>Access your customer account.</p></div>
+<div class="card"><h3>03. Get Started</h3><p>Explore available services.</p></div>
 </div>
 </section>
 
-<section class="section" id="login">
-<h2>Customer Login</h2>
-<p class="subtitle">Login system will be connected in a future step.</p>
-<a class="btn" href="#signup">Create Account</a>
-</section>
+<section id="account">
+<h2>Customer Account</h2>
 
-<section class="section" id="signup">
-<h2>Create Your Account</h2>
-<p class="subtitle">Registration system will be connected in a future step.</p>
-<a class="btn" href="#home">Back to Home</a>
+<div class="auth" id="authBox">
+<div id="loginForm">
+<h3 style="text-align:center">Login to NOVEXA</h3>
+<input type="email" id="loginEmail" placeholder="Email Address">
+<input type="password" id="loginPassword" placeholder="Password">
+<button onclick="loginUser()">Login</button>
+<p>Don't have an account? <a onclick="showSignup()">Sign Up</a></p>
+</div>
+
+<div id="signupForm" style="display:none">
+<h3 style="text-align:center">Create Account</h3>
+<input type="text" id="signupName" placeholder="Full Name">
+<input type="email" id="signupEmail" placeholder="Email Address">
+<input type="password" id="signupPassword" placeholder="Create Password">
+<button onclick="signupUser()">Create Account</button>
+<p>Already have an account? <a onclick="showLogin()">Login</a></p>
+</div>
+
+<div id="message"></div>
+</div>
+
+<div class="auth" id="dashboard">
+<h3>Welcome to NOVEXA!</h3>
+<p id="userEmail" style="margin:15px"></p>
+<p>Your account is connected.</p>
+<button onclick="logoutUser()">Logout</button>
+</div>
+<p class="small">Registration requires a valid email address.</p>
 </section>
 
 <footer>
-© 2026 NOVEXA. All Rights Reserved.<br><br>
-Owned by <strong>FBMDIGITAL</strong>
+<p>© 2026 NOVEXA. All Rights Reserved.</p>
+<p>Powered by FBMDIGITAL</p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="supabase.js"></script>
+
+<script>
+const db = window.novexaSupabase;
+
+function showMessage(text){
+ document.getElementById("message").textContent=text;
+}
+
+function showSignup(){
+ document.getElementById("loginForm").style.display="none";
+ document.getElementById("signupForm").style.display="block";
+ showMessage("");
+}
+
+function showLogin(){
+ document.getElementById("signupForm").style.display="none";
+ document.getElementById("loginForm").style.display="block";
+ showMessage("");
+}
+
+async function signupUser(){
+ if(!db){showMessage("Connection error. Please try again.");return;}
+ const name=document.getElementById("signupName").value.trim();
+ const email=document.getElementById("signupEmail").value.trim();
+ const password=document.getElementById("signupPassword").value;
+
+ if(!name||!email||!password){showMessage("Please fill in all fields.");return;}
+ if(password.length<6){showMessage("Password must be at least 6 characters.");return;}
+
+ showMessage("Creating your account...");
+ const {data,error}=await db.auth.signUp({
+  email:email,
+  password:password,
+  options:{data:{full_name:name}}
+ });
+
+ if(error){showMessage(error.message);return;}
+ if(data.session){
+  showDashboard(data.user);
+ }else{
+  showMessage("Account created! Please check your email to confirm your account, then login.");
+ }
+}
+
+async function loginUser(){
+ if(!db){showMessage("Connection error. Please try again.");return;}
+ const email=document.getElementById("loginEmail").value.trim();
+ const password=document.getElementById("loginPassword").value;
+
+ if(!email||!password){showMessage("Enter your email and password.");return;}
+
+ showMessage("Logging in...");
+ const {data,error}=await db.auth.signInWithPassword({
+  email:email,
+  password:password
+ });
+
+ if(error){showMessage(error.message);return;}
+ showDashboard(data.user);
+}
+
+function showDashboard(user){
+ document.getElementById("authBox").style.display="none";
+ document.getElementById("dashboard").style.display="block";
+ document.getElementById("userEmail").textContent=user.email;
+}
+
+async function logoutUser(){
+ const {error}=await db.auth.signOut();
+ if(error){alert(error.message);return;}
+ document.getElementById("dashboard").style.display="none";
+ document.getElementById("authBox").style.display="block";
+ showLogin();
+}
+
+async function checkSession(){
+ if(!db)return;
+ const {data}=await db.auth.getSession();
+ if(data.session)showDashboard(data.session.user);
+}
+
+if(db){
+ db.auth.onAuthStateChange((event,session)=>{
+  if(event==="SIGNED_IN" && session)showDashboard(session.user);
+ });
+ checkSession();
+}else{
+ showMessage("Supabase connection not found. Check supabase.js.");
+}
+</script>
+
 </body>
 </html>
